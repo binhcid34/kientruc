@@ -28,7 +28,8 @@
     <title>Bản đồ Việt Nam</title>
     <script src="mapdata.js"></script>
     <script src="countrymap.js"></script>
-
+    
+    
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -61,33 +62,52 @@
     </div> <!-- .site-header -->
 
    <div class="container_map">
-    <div id="map"></div>
+    <div id="map">
+        
+    </div>
     <div class="content">
         <h4>Chú thích</h4>
         <ul class = "note">
             <li>
-                <div class="circle"></div>
+                <button onclick="clickthoiNgo()">
+                    <div class="circle" ></div>
+                </button>
                 <p>Thời nhà Ngô</p>
             </li>
             <li>
-                <div class="circle1"></div>
+                <button onclick="clickupdatethoiDinh()">
+                    <div class="circle1" ></div>
+                </button>
                 <p>Thời nhà Đinh</p>
             </li>
             <li>
-                <div class="circle2"></div>
+                <button onclick="clickupdatethoiLe()">
+                    <div class="circle2" ></div>
+                </button>
                 <p>Thời nhà Lê</p>
             </li>
             <li>
-                <div class="circle3"></div>
+                <button onclick="clickupdatethoiLy()">
+                    <div class="circle3" ></div>
+                </button>
                 <p>Thời nhà Lý</p>
             </li>
-            <li><div class="circle4"></div>
+            <li>
+                <button onclick="clickupdatethoiTran()">
+                    <div class="circle4" ></div>
+                </button>
                 <p>Thời nhà Trần</p>
             </li>
-            <li><div class="circle5"></div>
+            <li>
+                <button onclick="clickupdatethoiHo()">
+                    <div class="circle5" ></div>
+                </button>
                 <p>Thời nhà Hồ</p>
             </li>
-            <li><div class="circle6"></div>
+            <li>
+                <button onclick="clickupdatethoiNguyen()">
+                    <div class="circle6" ></div>
+                </button>
                 <p>Thời nhà Nguyễn</p>
             </li>
 
@@ -255,11 +275,49 @@
             </div>
         </div>
     </footer>
-
+   
     <script src="js/vendor/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>    
-    
+    <script>
+        function reload_js(src) {
+            $('script[src="' + src + '"]').remove();
+            $('<script>').attr('src', src).appendTo('head');
+        }
+        function clickupdatethoiLy(){
+           
+            clickthoiLy();
+            
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiNgo(){
+            clickthoiNgo();
+            
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiDinh(){
+            clickthoiDinh();
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiLe(){
+            clickthoiLe();
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiTran(){
+            clickthoiTran();
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiHo(){
+            clickthoiHo();
+            reload_js('countrymap.js');
+        }
+        function clickupdatethoiNguyen(){
+           
+            clickthoiNguyen();
+            reload_js('countrymap.js');
+        }
+
+    </script>
 </body>
 </html>

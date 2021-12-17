@@ -323,6 +323,14 @@ var simplemaps_countrymap_mapdata={
        color: "#44df44",
        url: "/mapVietNam/Documentation.html",
        description: "Văn Miếu Quốc Tử Giám là quần thể di tích đa dạng và phong phú hàng đầu của thành phố Hà Nội, nằm ở phía Nam kinh thành Thăng Long. Quần thể kiến trúc Văn Miếu – Quốc Tử Giám bao gồm: hồ Văn, khu Văn Miếu – Quốc Tử Giám và vườn Giám, mà kiến trúc chủ thể là Văn Miếu - nơi thờ Khổng Tử và Quốc Tử Giám - trường đại học đầu tiên của Việt Nam"
+     },
+     "8": {
+       lat:"16.754170942789244",
+       lng:"107.1902979227231",
+       name: "Thành cổ Quảng Trị",
+       color: "#456BD9",
+       description: "Thành Cổ Quảng Trị được xây dựng từ thời vua Gia Long và đến thời vua Minh Mạng mới hoàn thiện, kéo dài gần 28 năm (1809-1837), Thành lúc đầu được đắp bằng đất, đến năm 1837 vua Minh Mạng cho xây lại bằng gạch",
+       url: "/mapVietNam/Documentation.html"
      }
    },
    labels: {},
@@ -331,3 +339,77 @@ var simplemaps_countrymap_mapdata={
    },
    regions: {}
  };
+ function clickthoiLy() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#44df44") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+ }
+function clickthoiNgo() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#FF0000") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+function clickthoiDinh() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#FFCC00") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+function clickthoiLe() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#FFFF00") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+
+function clickthoiTran() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#0000FF") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+
+function clickthoiHo() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#456BD9") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+
+function clickthoiNguyen() {
+  let a = simplemaps_countrymap_mapdata.locations;
+
+  for (let i = 0; i <= 8;i++){
+    if(a[i].color != "#ea27ea") {
+      delete a[i];
+    }
+  }
+  console.log(a);
+}
+
